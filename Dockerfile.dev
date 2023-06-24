@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /tyd-ui-dev
+
+COPY ./package.json /tyd-ui-dev
+
+RUN npm install
+
+COPY . /tyd-ui-dev
+
+CMD [ "npm", "start" ]

@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Noto Serif', serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+code {
+  font-family: 'Bree Serif', serif;
+  /* font-family: 'Noto Serif', serif; */
+}
