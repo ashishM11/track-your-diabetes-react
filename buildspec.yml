@@ -8,6 +8,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
+      - npm install
       - aws --version
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 196631319496.dkr.ecr.ap-south-1.amazonaws.com
       - REPOSITORY_URI=196631319496.dkr.ecr.ap-south-1.amazonaws.com/tyd-reactui
@@ -33,7 +34,7 @@ phases:
       - cat imagedefinitions.json
 
 
-# artifacts:
-#   files:
-#     - target/tyd-users-module.jar
-#     - imagedefinitions.json
+artifacts:
+  files:
+    - "build/*"
+    - "build/**/*"
