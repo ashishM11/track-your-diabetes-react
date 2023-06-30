@@ -54,7 +54,7 @@ const initialState = {
 }
 
 export const registerNewUser = createAsyncThunk('users/registerNewUser', async (userRequestDTO) => {
-    const response = await axios.post('http://localhost:9000/api/v1/user/register', userRequestDTO);
+    const response = await axios.post('http://tyd-user-module-alb-1944037695.ap-south-1.elb.amazonaws.com:9000/api/v1/user/register', userRequestDTO);
     return response.data;
 });
 
