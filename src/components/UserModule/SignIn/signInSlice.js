@@ -17,7 +17,7 @@ const initialState = {
 }
 
 export const authenticate = createAsyncThunk('users/authenticate', async (UserSignInRequestDTO) => {
-    const response = await axios.post('http://localhost:9000/api/v1/user/auth',UserSignInRequestDTO);
+    const response = await axios.post('http://tyd-user-module-alb-1944037695.ap-south-1.elb.amazonaws.com:9000/api/v1/user/auth',UserSignInRequestDTO);
     return response.data;
 });
 
